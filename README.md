@@ -1,1 +1,1 @@
-Criação do repositório de exercícios do curso. Testanto e aprendendo os conceitos e comandos Git e GitHub no terminal.
+Criação do repositório de exercícios do curso. Aqui ficarão registrados as resoluções dos exercícios propostos pela Trybe no decorrer do curso de Desenvolvimento Web da escola que ensina a programar, a aprender e a trabalhar.
