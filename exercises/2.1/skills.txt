@@ -1,9 +1,6 @@
 Unix
 Bash
 Git
-<<<<<<< HEAD
-JavaScript
-=======
 HTML 
 CSS
->>>>>>> trybe-skills-changes
+JavaScript
