@@ -29,3 +29,9 @@ h1 {
   width: 300px;
   display: inline-block;
 }
+ ul li {
+    display: inline;
+}
+h3 {
+    margin-left: 220px;
+}
