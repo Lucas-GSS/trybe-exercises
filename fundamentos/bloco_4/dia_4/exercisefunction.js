@@ -1,5 +1,6 @@
 function checkPalindrome (string){
     let palindrome = string.split('').reverse().join('')
+    //split separa as letras, reverse as inverte e join junta-as invertidamente
     return string === palindrome
 }
 console.log(checkPalindrome('lucas'));
