@@ -83,6 +83,14 @@
       paragraph.innerHTML = paragraph.innerHTML.toUpperCase();
     }
     paragraphUpperCase();
+
+    function showContent() {
+        let content = document.getElementsByTagName('p');
+        for (let key of content) {
+            console.log(key)
+        }
+    }
+    showContent();
     </script>
   </body>
 </html>
