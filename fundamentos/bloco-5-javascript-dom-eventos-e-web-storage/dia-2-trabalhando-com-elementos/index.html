@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main id="paiDoPai">
+        <section id="pai">
+            <section id="primeiroFilho"></section>
+            <section id="elementoOndeVoceEsta">
+                <section id="primeiroFilhoDoFilho"></section>
+                <section id="segundoEUltimoFilhoDoFilho"></section>
+            </section>
+            Atenção!
+            <section id="terceiroFilho"></section>
+            <section id="quartoEUltimoFilho"></section>
+        </section>
+        <script>
+            //Acessar elemento 'elementoOndeVoceEsta'
+            console.log(document.getElementById('elementoOndeVoceEsta'));
+            //A partir do elemneto acessado, acessar o respectivo elemento pai e alterar a cor
+            document.getElementById('elementoOndeVoceEsta').parentElement.style.color = 'blue';
+            //Acessar 'primeiroFilhoDoFilho e adicionar texto'
+            document.querySelector('#primeiroFilhoDoFilho').innerHTML = ('<p>Acessei com sucesso</p>');
+            //Acessar 'primeiroFilho' a partir de 'pai'
+            console.log(document.querySelector('#pai').firstElementChild);
+            //Acessar 'priemiroFilho' a partir de 'elementoOndeVoceEsta'
+            console.log(document.querySelector('#elementoOndeVoceEsta').previousElementSibling);
+            //Acessar 'atenção' a partir de 'elementoOndeVoceEsta'
+            console.log(document.getElementById('elementoOndeVoceEsta').nextSibling);
+            //Acessar 'terceiroFilho' a partir de 'elementoOndeVoceEsta'
+            console.log(document.querySelector('#elementoOndeVoceEsta').nextElementSibling);
+            //Acessar 'terceiroFilho' a partir de 'pai'
+            console.log(document.querySelector('#pai').children[6]);
+
+            //Criar elemento irmão para 'elementoOndeVoceEsta'
+            const pai = document.querySelector('#pai');
+            let irmao = document.createElement('section');
+            pai.appendChild(irmao);
+            //Criar filho para 'elementoOndeVoceEsta'
+            const ondeEstou = document.querySelector('#elementoOndeVoceEsta');
+            const filho = document.createElement('article');
+            ondeEstou.appendChild(filho);
+            //Criar filho para 'primeiroFilhoDoFilho'
+            const filhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+            const novoFilho = document.createElement('p');
+            filhoDoFilho.appendChild(novoFilho);
+            //Acessar 'terceiroFilho' a partir do criado acima
+            console.log(novoFilho.parentElement.parentElement.nextElementSibling);
+            //Remover os elementos de 'paiDoPai' exceto 'pai', 'elementoOndeVoceEsta', 'primeiroFilhoDoFilho' 
+            const pai = document.getElementById('pai');
+
+            for (let index = pai.childNodes.length - 1; index >= 0; index -= 1) {
+                const currentChildren = pai.childNodes[index];
+                if (currentChildren.id !== 'elementoOndeVoceEsta') {
+                    currentChildren.remove();
+                }
+            }
+
+            const segundoEUltimoFilhoDoFilho = document.getElementById('segundoEUltimoFilhoDoFilho');
+            segundoEUltimoFilhoDoFilho.remove();
+        </script>
+    </main>
+</body>
+
+</html>
