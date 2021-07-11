@@ -113,8 +113,15 @@
         main.appendChild(subH3);
        }
        //Parte 2
-       //Adicione a classe title na tag h1 criada
+       //1- Adicione a classe title na tag h1 criada
         title.className = 'title';
+
+        //2- Adicione a classe description nas 3 tags h3 criadas
+       let description = document.getElementsByTagName('h3');
+       for (let key of description){
+           description = key.className = 'description'
+       }
+       
     </script>
   </body>
 </html>
