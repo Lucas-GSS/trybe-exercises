@@ -104,6 +104,14 @@
         unList.appendChild(listItem)
        }
        rigthSection.appendChild(unList)
+
+       //9- Adicione 3 tags h3 , todas sendo filhas do main criado no passo 2
+       let subH3;
+       for (let index = 1; index <= 3; index +=1){
+        subH3 = document.createElement('h3');
+        subH3.innerText = 'Pai tá on'
+        main.appendChild(subH3);
+       }
     </script>
   </body>
 </html>
