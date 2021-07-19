@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>
+</head>
+<body>
+    <h1>Cadastro de Currículo</h1>
+    <form action="" method="GET">
+        <fieldset>
+            <legend>Dados Pessoais</legend>
+            <label for="input-name">Nome:
+                <input type="text" name="nome" id="input-name" required maxlength="40">
+            </label>
+            <br>
+            <label for="input-email">E-mail:
+                <input type="email" name="email" id="input-email" required maxlength="50">
+            </label>  
+            <br>
+            <label for="input-cpf">CPF:
+                <input type="text" name="cpf" id="input-cpf" required maxlength="11">
+            </label>
+            <br>
+            <label for="input-endereco">Endereço:
+                <input type="text" name="endereco" id="input-endereco" required maxlength="200">
+            </label>  
+            <br>
+            <label for="input-cidade">Cidade:
+                <input type="text" name="cidade" id="input-cidade" required maxlength="28">
+            </label>
+            <br>
+            <label for="input-estado">Estado:
+                <select name="estado" id="input-estado" required></select>
+                    
+                </select>
+            </label>
+            <br>
+            <label for="moradia">Tipo de moradia:
+                <input type="radio" name="moradia" id="casa" required>Casa
+                <input type="radio" name="moradia" id="apt" required>Apartamento
+            </label>    
+        </fieldset>
+    </form>
+</body>
+</html>
