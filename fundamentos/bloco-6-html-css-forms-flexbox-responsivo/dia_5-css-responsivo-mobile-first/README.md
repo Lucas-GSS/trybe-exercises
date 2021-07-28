@@ -129,7 +129,8 @@ Para os seguintes exercícios você não precisará alterar o arquivo HTML, apen
 
 4. Sem alterar a classe trick , faça com que o texto dela apareça somente quando a tela estiver com menos de 500px de largura .
 
-Parte I - Criar uma página para uma tela pequena
+# Parte I - Criar uma página para uma tela pequena
+
 Antes de começar, copie o template HTML e CSS abaixo, e salve em seus respectivos arquivos:
 
 ```html
