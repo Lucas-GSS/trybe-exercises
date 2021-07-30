@@ -11,7 +11,7 @@ const lesson2 = {
   professor: 'Carlos',
 };
 
-const addTurno = (lesson2, key, value) => lesson2[key] = value;
+ const addTurno = (lesson2, key, value) => lesson2[key] = value;
 addTurno(lesson2, 'turno', 'manhã');
 
 const lesson3 = {
@@ -21,7 +21,7 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const listKeys = obj => console.log(Object.keys(obj));
+ const listKeys = obj => console.log(Object.keys(obj));
 listKeys(lesson3);
 
 const lengthObj = obj => console.log(Object.keys(obj).length);
@@ -29,3 +29,17 @@ lengthObj(lesson3);
 
 const valuesObj = obj => console.log(Object.values(obj));
 valuesObj(lesson3);
+
+const allLessons = {
+  lesson1: {},
+  lesson2: {},
+  lesson3: {},
+}
+
+const makeObj = (allLessons, lesson1, lesson2, lesson3) => {
+  Object.assign(allLessons.lesson1, lesson1);
+  Object.assign(allLessons.lesson2, lesson2);
+  Object.assign(allLessons.lesson3, lesson3)
+  console.log(allLessons);
+}
+makeObj(allLessons, lesson1, lesson2, lesson3);
