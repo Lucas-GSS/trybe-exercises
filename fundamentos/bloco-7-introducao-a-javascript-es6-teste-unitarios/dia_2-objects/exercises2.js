@@ -49,3 +49,15 @@ numberOfStudents(allLessons);
 
 const getValueByIndex = (obj, index) => console.log(Object.values(obj)[index]);
 getValueByIndex(lesson3, 2)
+
+const checkPair = (obj, key, value) => {
+  let isTrue = false;
+  const pairs = Object.entries(obj);
+  for (let index in pairs) {
+    if (pairs[index][0] === key && pairs[index][1] === value) {
+      isTrue = true
+    }
+  }
+  console.log(isTrue)
+}
+checkPair(lesson3, 'materia', 'Matemática');
