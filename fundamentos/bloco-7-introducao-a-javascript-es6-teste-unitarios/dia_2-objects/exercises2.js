@@ -17,3 +17,6 @@ const lesson3 = {
   professor: 'Maria Clara',
   turno: 'noite',
 };
+
+const addTurno = (lesson2, key, value) => lesson2[key] = value;
+addTurno(lesson2, 'turno', 'manhã');
