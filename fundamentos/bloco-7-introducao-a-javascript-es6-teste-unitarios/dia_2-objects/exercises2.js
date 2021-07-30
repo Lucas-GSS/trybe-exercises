@@ -46,3 +46,6 @@ makeObj(allLessons, lesson1, lesson2, lesson3);
 
 const numberOfStudents = allLessons => console.log(`Número Total de Estudantes: ${allLessons.lesson1.numeroEstudantes + allLessons.lesson2.numeroEstudantes + allLessons.lesson3.numeroEstudantes}`);
 numberOfStudents(allLessons);
+
+const getValueByIndex = (obj, index) => console.log(Object.values(obj)[index]);
+getValueByIndex(lesson3, 2)
