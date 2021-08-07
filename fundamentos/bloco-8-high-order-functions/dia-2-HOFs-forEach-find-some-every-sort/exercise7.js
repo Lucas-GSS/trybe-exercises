@@ -69,6 +69,8 @@ const expectedResult = false;
 
 function authorUnique() {
   // escreva seu código aqui
+  let birth = books[0].author.birthYear;
+  return books.every(year => year.author.birthYear !== birth ? true : false);
 }
 
 assert.strictEqual(authorUnique(), expectedResult);
