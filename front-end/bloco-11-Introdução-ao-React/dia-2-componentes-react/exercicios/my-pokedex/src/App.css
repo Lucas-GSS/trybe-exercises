@@ -1,0 +1,18 @@
+.App {
+  border-radius: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.poke {
+  border: black solid 2px;
+  border-radius: 20px;
+  background-color:mediumspringgreen;
+  margin: 20px 20px;
+  padding: 10px;
+}
+
+body{
+  background-color: darkturquoise;
+}
