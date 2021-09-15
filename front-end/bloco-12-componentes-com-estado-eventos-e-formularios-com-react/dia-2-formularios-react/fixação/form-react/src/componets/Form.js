@@ -1,51 +1,59 @@
 import React from 'react';
+import Select from './Select';
+import TextArea from './TextArea';
+import Name from './Name';
+import Idade from './Idade'
+import Email from './Email';
 
 class Form extends React.Component {
   constructor() {
     super()
-    this.state = {nome: ''}
+    this.state = {
+      nome: '',
+      idade: 0,
+      email: '',
+      estado: 'MG',
+      texto: '',
+      rockeiro: false,
+      erroNome: undefined,
+    };
     this.handleChange = this.handleChange.bind(this);
   }
+  // Event handler genérico, que permite controlar o estado de todos o componentes pertencentes à classe
   handleChange({target}) {
-    this.setState(() =>({[target.name]: target.value}))
+    const { name } = target;
+    const value = target.type === 'checkbox' ? target.checked : target.value; //Checkbox não possui value, seu valor está atrelado a propriedade checked
+    this.setState(() =>({
+      [name]: value,
+    }))
   }
+  
   render() {
     return (
       <form className='form'>
         <fieldset>
           <legend>Informações</legend>
-          <label for='nome'>
-            Nome:
-            <input type='text' id='nome' name='nome' onChange={this.handleChange}/>
-          </label>
+          <Name handleChange={this.handleChange} /> 
           <br/> <br/>
 
-          <label for='estado'>
-            Idade:
-            <input type='number' id='estado' name='estado'/> 
-          </label>
-          <br/><br/>
-
-          <label for='email'>E-mail:
-            <input type='email' id='email'/>
-          </label>
+          <Idade handleChange={this.handleChange} />
           <br/> <br/>
 
-          <label for='select'>Estado Favorito:
-            <select id='select'> 
-              <option value='MG'>Minas Gerais</option>
-              <option value='RS'>Rio Grande do Sul</option>
-              <option value='SC'>Santa Catarina</option>
-              <option value='PR'>Paraná</option>
-            </select>
-          </label>
+          <Email handleChange={this.handleChange} />
           <br/> <br/>
 
-          <label for='text-area'>
-            <textarea id='text-area' maxLength='80' placeholder='Justifique'>
-            </textarea>
+          <Select value={this.state.estado} handleChange={this.handleChange} />
+          <br/> <br/>
+
+          <TextArea handleChange={this.handleChange} />
+          <br/> <br/>
+
+          <label for='checkbox'> Curte Rock?
+            <input type='checkbox' id='checkbox' name='rockeiro' onChange={this.handleChange}/>
           </label>
+
         </fieldset>
+        <button>Enviar</button>
       </form>
     );
   }
