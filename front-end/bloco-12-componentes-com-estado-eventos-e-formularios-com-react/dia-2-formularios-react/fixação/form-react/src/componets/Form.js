@@ -1,4 +1,9 @@
 import React from 'react';
+import Select from './Select';
+import TextArea from './TextArea';
+import Name from './Name';
+import Idade from './Idade'
+import Email from './Email';
 
 class Form extends React.Component {
   constructor() {
@@ -10,6 +15,7 @@ class Form extends React.Component {
       estado: 'MG',
       texto: '',
       rockeiro: false,
+      erroNome: undefined,
     };
     this.handleChange = this.handleChange.bind(this);
   }
@@ -21,49 +27,31 @@ class Form extends React.Component {
       [name]: value,
     }))
   }
+  
   render() {
     return (
       <form className='form'>
         <fieldset>
           <legend>Informações</legend>
-          <label for='nome'>
-            Nome:
-            <input type='text' id='nome' name='nome' onChange={this.handleChange} /* Componente controlado, pois seu valor está sendo gerenciado pelo Componente que o renderiza */ /> 
-          </label>
+          <Name handleChange={this.handleChange} /> 
           <br/> <br/>
 
-          <label for='idade'>
-            Idade:
-            <input type='number' id='idade' name='idade' onChange={this.handleChange}/> 
-          </label>
-          <br/><br/>
-
-          <label for='email'>E-mail:
-            <input type='email' id='email' name='email' onChange={this.handleChange}/>
-          </label>
+          <Idade handleChange={this.handleChange} />
           <br/> <br/>
 
-          <label for='select'>Estado Favorito:
-            <select id='select' name='estado' 
-            value={this.state.estado} //Colocando como valor inicial o definido no estado inicial, quando chama a função troca o valor pelo do alvo do evento 
-            onChange={this.handleChange}> 
-              <option value='MG'>Minas Gerais</option>
-              <option value='RS'>Rio Grande do Sul</option>
-              <option value='SC'>Santa Catarina</option>
-              <option value='PR'>Paraná</option>
-            </select>
-          </label>
+          <Email handleChange={this.handleChange} />
           <br/> <br/>
 
-          <label for='text-area'>
-            <textarea id='text-area' maxLength='80' placeholder='Justifique' name='texto' onChange={this.handleChange}>
-            </textarea>
-          </label>
+          <Select value={this.state.estado} handleChange={this.handleChange} />
+          <br/> <br/>
+
+          <TextArea handleChange={this.handleChange} />
           <br/> <br/>
 
           <label for='checkbox'> Curte Rock?
             <input type='checkbox' id='checkbox' name='rockeiro' onChange={this.handleChange}/>
           </label>
+
         </fieldset>
         <button>Enviar</button>
       </form>
