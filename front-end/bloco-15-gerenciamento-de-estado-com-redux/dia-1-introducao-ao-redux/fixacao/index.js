@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Após instalar o redux, importá-lo
 const Redux = require('redux');
 
@@ -33,31 +32,3 @@ store.subscribe(() => console.log(store.getState()));
 
 // enviando a action para o reducer
 store.dispatch(logar('lucas@gmail.com'));
-
-=======
-const Redux = require('redux');
-const INITIAL_STATE = { login: false, email:"" };
-
-const reducer = (state = INITIAL_STATE, action) => {
-  switch (action.type) {
-    case 'Login':
-      return({
-        ...state,
-        login: !state.login,
-        email: action.email
-      })
-
-    default:
-      return state;
-  }
-};
-
-const myAction = (email) => ({type: 'Login', email});
-
-const store = Redux.createStore(reducer);
-
-store.subscribe(() => {
-  console.log(store.getState());
-});
-store.dispatch(myAction('lucas@gmail.com'));
->>>>>>> 08ae79361d387175d264c876a0e3559f519335f1
