@@ -36,8 +36,15 @@
         cidade: 'São Paulo',
       };
 
+      const NAME_1_CHANGED = 'NAME_1_CHANGED';
+      const NAME_2_CHANGED = 'NAME_2_CHANGED';
+
       const meuPrimeiroReducer = (state = ESTADO_INICIAL_1, action) => {
         switch (action.type) {
+          case NAME_1_CHANGED:
+            return ({ ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome });
           default:
             return state;
         }
@@ -45,10 +52,45 @@
 
       const meuSegundoReducer = (state = ESTADO_INICIAL_2, action) => {
         switch (action.type) {
+          case NAME_2_CHANGED:
+            return ({
+              ...state,
+              nome: action.nome,
+              sobrenome: action.sobrenome,
+            });
           default:
             return state;
         }
       };
+
+      const rootReducer = Redux.combineReducers({ meuPrimeiroReducer, meuSegundoReducer });
+
+      const store = Redux.createStore(rootReducer);
+
+      const actionChangeName1 = (payload) => ({ type: NAME_1_CHANGED, ...payload });
+      const actionChangeName2 = (payload) => ({ type: NAME_2_CHANGED, ...payload });
+
+      window.onload = () => {
+        setTimeout(() => {
+          store.dispatch(actionChangeName1({ nome: 'Lucas Gabriel', sobrenome: 'de Souza' }))
+          store.dispatch(actionChangeName2({ nome: 'Daniela', sobrenome: 'Jardim de Souza' }))
+        }, 3000);
+      };
+
+      const name1El = document.getElementById('nome-1');
+      const sobrenome1El = document.getElementById('sobrenome-1');
+
+      const name2El = document.getElementById('nome-2');
+      const sobrenome2El = document.getElementById('sobrenome-2');
+
+      store.subscribe(() => {
+        const { meuPrimeiroReducer } = store.getState();
+        name1El.innerHTML = meuPrimeiroReducer.nome;
+        sobrenome1El.innerHTML = meuPrimeiroReducer.sobrenome;
+        const { meuSegundoReducer } = store.getState();
+        name2El.innerHTML = meuSegundoReducer.nome;
+        sobrenome2El.innerHTML = meuSegundoReducer.sobrenome;
+      });
     </script>
   </body>
 </html>
