@@ -26,5 +26,12 @@ app.put('/users/:name/:age', (req, res) => {
 })
 
 
+app.get('/simpsons', (req, res) => {
+  const simpsons = getSimpsons();
+  return res.status(200).send(simpsons)
+});
+
+
+
 const port = 3001;
 app.listen(port, console.log(`Running on locallhost:${port}`));
