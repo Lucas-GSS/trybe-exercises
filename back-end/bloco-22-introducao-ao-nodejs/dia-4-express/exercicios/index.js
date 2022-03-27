@@ -41,5 +41,15 @@ app.get('/simpsons/:id', (req, res) => {
   return res.status(200).send(requiredSimpson);
 });
 
+app.post('/simpsons', (req, res) => {
+  const { id, name } = req.body;
+  const simpsons = getSimpsons();
+  const idAlreadyExists = simpsons.some((simpson) => simpson.id === id);
+  if(idAlreadyExists) return res.status(409).json({ message: 'id already exists' })
+  simpsons.push({id, name})
+  setSimpsons(simpsons);
+  return res.status(204).end();
+})
+
 const port = 3001;
 app.listen(port, console.log(`Running on locallhost:${port}`));
