@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const { getSimpsons, setSimpsons } = require('./getAndSetSimpsons');
 
 app.use(bodyParser.json());
 
@@ -31,7 +32,14 @@ app.get('/simpsons', (req, res) => {
   return res.status(200).send(simpsons)
 });
 
-
+app.get('/simpsons/:id', (req, res) => {
+  const { id } = req.params;
+  const simpsons = getSimpsons();
+  console.log(simpsons)
+  const requiredSimpson = simpsons.find((simpson) => simpson.id === id);
+  if (requiredSimpson === undefined) return res.status(404).json({ message: 'simpson not found' })
+  return res.status(200).send(requiredSimpson);
+});
 
 const port = 3001;
 app.listen(port, console.log(`Running on locallhost:${port}`));
