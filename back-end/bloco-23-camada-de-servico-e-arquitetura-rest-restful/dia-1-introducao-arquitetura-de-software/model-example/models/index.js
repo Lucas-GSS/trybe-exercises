@@ -2,8 +2,8 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-const Authors = require('./models/author');
-const Books = require('./models/books')
+const Authors = require('./author');
+const Books = require('./books')
 
 app.use(bodyParser.json());
 
