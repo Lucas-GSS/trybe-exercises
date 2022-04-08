@@ -1,0 +1,20 @@
+{
+  "name": "cep-lookup",
+  "version": "1.0.0",
+  "description": "Serviço de busca e cadastro de CEPs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "NODE_ENV=development nodemon ./src/index.js"
+  },
+  "keywords": [],
+  "author": "Lucas Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "httpie": "^1.1.2",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15"
+  }
+}
