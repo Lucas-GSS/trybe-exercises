@@ -1,8 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-const pingMiddleware = require('../middlewares/pingMiddleware');
-
-router.get('/', pingMiddleware);
+router.get('/', (_req, res) => res.status(200).json({ message: 'pong!' }));
 
 module.exports = router;
