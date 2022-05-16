@@ -1,0 +1,58 @@
+Docker
+
+Contexto:
+
+Necessidade de rodar uma aplicação em vários ambientes diferentes. Em uma equipe de desenvolvimento
+cada indivíduo tem sua máquina, com SO's diferentes, ferramentas de desenvolvimento em versões diferentes, o servidor
+em que aplicação será disponibilizada... Como garantir que a aplicação será executada sem problemas em todos esses 
+ambientes sem gastar tempo para configura-la todas as vezes que o ambiente mudar?
+--------------------------------------------------------------------------------------------------------------------------
+
+Solução:
+
+O Docker se apresenta como uma solução eficaz para este cenário. Ele é um software que permite criar containers
+ou seja, empacotar a aplicação e todas suas dependências, sendo assim, o problema de imcompatibilidade é resolvido
+e o tempo gasto com preparação para execução da aplicação é otimizado.
+--------------------------------------------------------------------------------------------------------------------------
+
+Como funciona:
+
+Três peças fundamentais para o seu funcionamento:
+
+- Dockerfile -> um arquivo com as instruções para construção de uma imagem
+
+- Imagem -> conjunto de instruções do Dockerfile, contendo toda informação necessária para criação de um container
+
+- Container -> forma de virtulização a nível de Sistema Operacional.
+  No contexto do Docker processo de execução da imagem de uma aplicação de forma isolada.
+  Na prática é a aplicação sendo executada. Podemos ter vários containers baseados em uma única imagem
+
+Rodando um container pelo CLI
+
+Estrutura de comando docker -> docker comando sub-comando parâmetros
+
+Rodar container -> docker container[opcional] run <nome-da-imagem>:<tag>[versão da imagem, opcional, padrão: latest]
+
+*se a imagem não estiver baixada na máquina onde o comando foi executado, o docker de se encarrega de baixá-la do 
+repositório de imagens docker, o DockerHub. é possível dar push e pull em imagens para lá, assim como no GitHub
+
+Rodar container dando nome a ele -> docker container run --name <nome> <img>
+
+Rodar container e removê-lo após sua execução (cleanup) -> docker container run -it --rm <img>:tag
+
+Para listar containers:
+
+Listar containers ativos -> docker container ls
+
+Lsitar todos os containers ativos e inativos -> docker container ls -a
+
+Mostrar ultimo container criado independente do status -> docker container ls -l
+
+Rodar um comando no container antes dele ser encerrado -> docker container run <img>:<tag> <comando> <argumentos>.
+Ex.: docker container run ubuntu echo 'Hello world'
+
+Acessar o terminal do container de forma interativa -> docker container run -ti ubuntu.
+* <t> diz que quero acessar o terminal; <i> diz quero interagir com ele por um meio físico, no caso, o teclado.
+
+Rodar container em segundo plano -> docker container run -d <img>
+* -d: dattached (desaclopado/2ºplano); pode ser combinado com o -it(-dit)
