@@ -1,0 +1,23 @@
+    COMUNICAÇÃO ENTRE CONTAINERS POR MEIO DE REDES
+
+- Containers podem se comunicar por meio de redes. Cada rede possui um ou nenhum driver. Existem algumas pré-definidas:
+
+* none -> o container nessa rede está isoloado e não consegue se comunicar com os demais;
+
+* host -> compartilha toda a stack de rede com o Host, recomendada para casos específicos;
+
+* bridge -> padrão, todo container que não é associado a uma rede é associado a ela.
+  Permite comunicação entre containers por meio do protocolo TCP/IP;
+
+-Também é possível criar as próprias redes, que é metodo mais recomendado para a comunicação entre containers:
+
+Criar rede -> docker network create -d (driver) minha-rede
+
+Conectar/desconectar containers da rede -> docker network (dis)connect minha-rede meu-container
+
+Listar redes -> docker network ls
+
+Mostrar detalhes da rede -> docker network inspect minha-rede
+
+--------------------------------------------------------------------------------------------------------------------
+
