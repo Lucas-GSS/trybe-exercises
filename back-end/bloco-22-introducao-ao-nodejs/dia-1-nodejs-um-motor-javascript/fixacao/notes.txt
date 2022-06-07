@@ -1,0 +1,37 @@
+O que é o NodeJS?
+
+É um interpretador JavaScript, que permite que ele seja executado fora do navegador.
+Foi construído baseado no V8: engine do Google que inetrpreta o JavaScript no navegador.
+Possui algumas diferenças dos runtimes dos navgadores, principalmente por não fornecer acesso a manipulação páginas Web,
+mas do sistema de arquivos do Sistema Operacional que ele está rodando.
+
+- A grande vantagem de se usar o Node é que ele é mais performático do que outras tecnologias com mesmo propósito.
+Essa performance se deve ao fato de ele trabalhar de forma assíncrona, podendo assim lidar com várias requisições
+sem bloquear o fluxo de processamento.
+
+- Além disso possui uma enorme quantidade de ferramentas que resolvem os mais variados tipos de problemas e também uma
+comunidade ativa e engajada
+
+O Node é composto por um sistema de módulos. Módulos são pedaços de código, funcionalidades que possuem escopo próprio
+ou seja, suas variáveis, funções etc estão acessíveis somente dentro de seu contexto.
+
+Esses módulos podem ser: Internos -> nativos do Node, com OS, FS, util, etc...; Locais -> nossos próprios arquivos
+com nossas funcionalidades; Terceiros -> criados por outras pessoas e disponibilizados no NPM.
+
+NPM é o repositórios de pacotes do Node. Lá podemos publicar nossos módulos para uso próprio ou de outras pessoas.
+
+Como criar um pacote?
+
+npm init -> este comando cria um pacote node simples. Um arquivo package.json é criado, nesse arquivo existem dados e 
+metadados sobre a aplicação, como autor, licença, versão, dependencias, scripts...Onde há um pakcge.json é um pacote node.
+
+npm run -> este comando serve para executar scripts definidos no package. Scripts são atalhos para executar comandos
+que rodam algum ferramenta, como por exemplo o linter. O script é adicionado na chave scripts do package:
+"nome-do-script": "comando-que-dispara-o-script"
+
+npm start -> comando que serve para iniciar a aplicação. Este comando é o que vai disparar o arquivo raiz do pacote
+"start": "node arquivoraiz.js"
+
+npm install -> comando para instalar dependencias e pacotes de terceiros. Pode ser usado com a flag -D para
+indicar q a dependencia instalada é de desenvolvimento e não de produção, ou seja, só é usada durante a construção do código
+
