@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "imc": "node imc.js",
-    "velocidade": "node velocidade.js"
+    "velocidade": "node velocidade.js",
+    "sorteio": "node sorteio.js"
   },
   "author": "Lucas",
   "license": "ISC",
