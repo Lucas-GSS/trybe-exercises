@@ -1,0 +1,17 @@
+{
+  "name": "my-scripts",
+  "version": "1.0.0",
+  "description": "scripts para exercitar conceitos do Node",
+  "main": "index.js",
+  "scripts": {
+    "imc": "node imc.js",
+    "velocidade": "node velocidade.js",
+    "sorteio": "node sorteio.js",
+    "start": "node index.js"
+  },
+  "author": "Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  }
+}
