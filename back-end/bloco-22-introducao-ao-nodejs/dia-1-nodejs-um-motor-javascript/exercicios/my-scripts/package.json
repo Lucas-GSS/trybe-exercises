@@ -4,7 +4,8 @@
   "description": "scripts para exercitar conceitos do Node",
   "main": "index.js",
   "scripts": {
-    "imc": "node imc.js"
+    "imc": "node imc.js",
+    "velocidade": "node velocidade.js"
   },
   "author": "Lucas",
   "license": "ISC",
