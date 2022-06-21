@@ -1,0 +1,33 @@
+
+		COMO JAVASCRIPT FUNCIONA
+		
+	- O funcionamento do JavaScript é síncrono. Ele executa uma instrução de cada vez na ordem em que estão declaradas.
+  Não pode executar duas coisas ao mesmo tempo. Se uma operação é muito demorada como uma de I/O, ele fica bloqueado
+  até que essa operação seja resolvida. Isso é ruim porque no browser significa que o usuário nem pode mais interagir
+  com a página, o que é péssimo para o UX.
+	
+	- Ele tem esse comportamento pois é uma linguagem single thread, ou seja, uma única linha de processamento.
+  Esse processamento ocorre em sua Call Stack, que é onde ele empilha as instruções que lhe são passadas.
+	
+	- Outro elemento importante no funcionamento do JS é o Event Loop, que fica constantemente checando o que há na Call Stack.
+  Quando ela está vazia, o programa é encerrado.
+	
+	- Mas como não bloquear a thread? Como trabalhar de forma assíncrona?
+	
+	* Aí entra o Stack Queue, que é uma fila de eventos fora do Call Stack.
+  Podemos tirar operações demoradas da Call Stack e jogar na Stack Queue por meio de callbacks e Promises.
+  Quando uma operação é jogada na Stack Queue ela será resolvida paralelamente à Call Stack, e quando o Event Loop
+  verificar que a Call Stack está vazia, ele a alimenta com o que estiver na Stack Queue.
+  Ou seja, o retorno de nossas operações assíncronas será dado somente quando tudo que estiver na Call Stack
+  tiver sido resolvido, mesmo que esteja pronto antes disso, só é retornado quando a Call Stack estiver vazia.
+	
+	----------------------------------------------------------------------------------------------------------------------------------------
+	
+	JS Assíncrono
+	
+	Até 2015 Callbacks eram a solução para o problema de bloquear a thread.
+  Porém, facilmente gerava outro problema: o callbakc hell, várias callbacks aninhadas para executar sequencias de instruções.
+	
+	Então as Promises chegaram para resolver isso. O que é uma Promise?
+  É uma promessa de que uma operação demorada como I/O será executada e retornará algo, seja um erro (reject)
+  seja o resultado esperado (resolve). Erro = promise rejeitada/ Sucesso = promise resolvida;
