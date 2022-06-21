@@ -8,9 +8,9 @@ const getAllCharacters = async () => {
   return characters;
 }
 
-// getAllCharacters()
-// .then((character) => character.forEach(({id, name}) => console.log(`${id} - ${name}`)))
-// .catch((e) => console.log(e.message))
+getAllCharacters()
+.then((character) => character.forEach(({id, name}) => console.log(`${id} - ${name}`)))
+.catch((e) => console.log(e.message))
 
 const getById = async (id) => {
   const characters = await getAllCharacters();
@@ -19,20 +19,20 @@ const getById = async (id) => {
   return chosenCharacter;
 }
 
-// getById(10)
-// .then((c) => console.log(c))
-// .catch((e) => e.message)
+getById(10)
+.then((c) => console.log(c))
+.catch((e) => e.message)
 
-// const removeIdSixAndTen = async () => {
-//   const characters = await getAllCharacters();
-//   const filteredCharacters = characters.filter((c) => Number(c.id) !== 6 && Number(c.id) !== 10);
-//   await fs.writeFile(simpsonsPath, JSON.stringify(filteredCharacters))
-//   return filteredCharacters;
-// }
+const removeIdSixAndTen = async () => {
+  const characters = await getAllCharacters();
+  const filteredCharacters = characters.filter((c) => Number(c.id) !== 6 && Number(c.id) !== 10);
+  await fs.writeFile(simpsonsPath, JSON.stringify(filteredCharacters))
+  return filteredCharacters;
+}
 
-// removeIdSixAndTen()
-// .then((r) => console.log(r))
-// .catch((e) => console.log(e.message))
+removeIdSixAndTen()
+.then((r) => console.log(r))
+.catch((e) => console.log(e.message))
 
 const createNewFile = async () => {
   const characters = await getAllCharacters();
@@ -41,9 +41,9 @@ const createNewFile = async () => {
   return filteredCharacters
 }
 
-// createNewFile()
-// .then((r) => console.log(r))
-// .catch((e) => console.log(e.message)) 
+createNewFile()
+.then((r) => console.log(r))
+.catch((e) => console.log(e.message)) 
 
 const simpsonsFamilyPath = './exercicios/simpsonsFamily.json'
 
@@ -56,9 +56,9 @@ const addNelson = async () => {
   return addNelson
 }
 
-// addNelson()
-// .then((r) => console.log(r))
-// .catch((e) => console.log(e.message))
+addNelson()
+.then((r) => console.log(r))
+.catch((e) => console.log(e.message))
 
 const replaceNelson = async () => {
   const maggieSimpson = await getById(5);
