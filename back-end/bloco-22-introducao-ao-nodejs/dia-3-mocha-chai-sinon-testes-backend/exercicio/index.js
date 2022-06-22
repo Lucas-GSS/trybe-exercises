@@ -1,3 +1,5 @@
+const fs = require('fs');
+
 const checkNumber = (number) => {
   if (typeof(number) !== 'number') {
     return 'o valor deve ser um número';
@@ -10,4 +12,9 @@ const checkNumber = (number) => {
   }
 }
 
-module.exports = checkNumber
+const writeFile = (fileName, fileContent) => {
+    fs.writeFileSync(fileName, fileContent)
+    return 'ok'
+}
+
+module.exports = { checkNumber, writeFile };

@@ -1,6 +1,9 @@
 const { expect } = require('chai');
+const sinon = require('sinon');
 
-const checkNumber = require('./index');
+const { checkNumber, writeFile} = require('./index');
+
+const fs = require('fs');
 
 describe('Teste `checkNumber', () => {
 
@@ -51,6 +54,27 @@ describe('Teste `checkNumber', () => {
       const string = checkNumber('a');
       expect(string).to.be.eqls('o valor deve ser um número');
     });
+  });
+
+});
+
+describe('Teste `writeFile', () => {
+  describe('recebe o nome de arquivo e conteúdo para adicionar nele', () => {
+    const filePath = './ola.txt';
+    const fileContent = 'Olá pessoas';
+
+    before(() => {
+      sinon.stub(fs, 'writeFileSync')
+    });
+    after(() => {
+      fs.writeFileSync.restore();
+    })
+    it('após escrever o conteúdo no arquivo retorna um `ok`', () => {
+      const result = writeFile(filePath, fileContent);
+      expect(result).to.be.a('string');
+      expect(result).to.be.eql('ok');
+    });
+
   });
 
 });
