@@ -1,4 +1,7 @@
 const express = require('express');
+const router = express.Router();
+const rescue = require('express-rescue');
+
 const {
   getAllRecipes,
   getBySearchTerm,
@@ -8,15 +11,13 @@ const {
 
 const { validateName, validatePrice } = require('../middlewares/validations');
 
-const router = express.Router();
+router.get('/', rescue(getAllRecipes));
 
-router.get('/', getAllRecipes);
+router.get('/search', rescue(getBySearchTerm));
 
-router.get('/search', getBySearchTerm);
+router.get('/:id', rescue(getById));
 
-router.get('/:id', getById);
-
-router.post('/', validateName, validatePrice, createRecipe);
+router.post('/', rescue([validateName, validatePrice, createRecipe]));
 
 
 module.exports = router;

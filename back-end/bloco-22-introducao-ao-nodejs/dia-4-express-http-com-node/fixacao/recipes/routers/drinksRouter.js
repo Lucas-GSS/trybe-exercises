@@ -1,4 +1,7 @@
 const express = require('express');
+const router = express.Router();
+const rescue = require('express-rescue');
+
 const {
   getAllDrinks,
   getBySearchTerm,
@@ -7,20 +10,19 @@ const {
   updateDrink,
   deleteDrink
 } = require('../middlewares/drinksMiddlewares');
+
 const { validateName, validatePrice } = require('../middlewares/validations');
 
-const router = express.Router();
+router.get('/', rescue(getAllDrinks));
 
-router.get('/', getAllDrinks);
+router.get('/search', rescue(getBySearchTerm));
 
-router.get('/search', getBySearchTerm);
+router.get('/:id', rescue(getById));
 
-router.get('/:id', getById);
+router.post('/', rescue([validateName, validatePrice, createDrink]));
 
-router.post('/', validateName, validatePrice, createDrink);
+router.put('/:id', rescue([validateName, validatePrice, updateDrink]));
 
-router.put('/:id', validateName, validatePrice, updateDrink);
-
-router.delete('/:id', deleteDrink);
+router.delete('/:id', rescue(deleteDrink));
 
 module.exports = router;
