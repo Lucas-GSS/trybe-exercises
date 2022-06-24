@@ -5,7 +5,7 @@ const getAllRecipes = (_req, res) => res.status(200).json(recipes);
 const getBySearchTerm = (req, res) => {
   const { name, maxPrice } = req.query;
   const recipe = recipes.filter((recipe) => recipe.name.includes(name) && recipe.price <= Number(maxPrice));
-  if (!recipe) return res.status(404).json({ message: 'Receita não encontrada' });
+  if (recipe.length === 0) return res.status(404).json({ message: 'Receita não encontrada' });
   return res.status(200).json(recipe);
 };
 
