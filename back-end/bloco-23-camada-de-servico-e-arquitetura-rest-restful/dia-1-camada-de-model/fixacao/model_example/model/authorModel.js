@@ -7,8 +7,15 @@ const serialize = (author) => ({
 });
 
 const getAll = async () => {
-  const [authors] = await connection.query('SELECT * FROM authors;');
+  const query = 'SELECT * FROM authors;';
+  const [authors] = await connection.query(query);
   return authors.map(serialize);
 }
 
-module.exports = getAll;
+const getById = async (id) => {
+  const query = 'SELECT * FROM authors WHERE id = ?';
+  const [author] = await connection.query(query, [id]);
+  return author;
+}
+
+module.exports = { getAll, getById };
