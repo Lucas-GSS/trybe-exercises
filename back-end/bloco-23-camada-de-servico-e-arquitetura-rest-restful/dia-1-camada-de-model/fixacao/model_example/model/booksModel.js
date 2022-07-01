@@ -6,10 +6,16 @@ const getAll = async () => {
   return books;
 };
 
-const getById = async (authorId) => {
+const getByAuthorId = async (authorId) => {
   const query = 'SELECT * FROM books WHERE author_id = ?';
   const [books] = await connection.query(query, [authorId]);
   return books;
+};
+
+const getById = async (id) => {
+  const query = 'SELECT * FROM books where id = ?;';
+  const [book] = await connection.query(query, [id]);
+  return book;
 }
 
-module.exports = { getAll, getById };
+module.exports = { getAll, getByAuthorId, getById };
