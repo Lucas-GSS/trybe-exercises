@@ -1,0 +1,20 @@
+{
+  // configuração para o debbuger via npm
+  "configurations": [
+    {
+      // nome do processo do debbuger
+      "name": "debug",
+      "request": "launch",
+      "runtimeArgs": [
+        // define qual script que ao ser executado dispara o debbuger, nesse caso é o `debug`
+        "run-script",
+        "debug"
+      ],
+      "runtimeExecutable": "npm",
+      "skipFiles": [
+        "<node_internals>/**"
+      ],
+      "type": "node"
+    }
+  ]
+}
