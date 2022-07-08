@@ -1,0 +1,6 @@
+{
+  // adicionando o eslint da trybe a um projeto backend
+  // rodar no terminal:  npm i/add -D eslint eslint-config-trybe-backend
+  // o extends abaixo diz ao eslint qual configuração seguir
+  "extends": "trybe-backend" 
+}

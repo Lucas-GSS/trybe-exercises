@@ -1,0 +1,12 @@
+{
+  // configura eslint para que ao salvar o arquivo as formatações abaixo sejam aplicadas
+  "editor.formatOnSave": true,
+  // define espaço de identação como 2 espaços
+  "editor.tabSize": 2,
+  // força o editor a corrigir identações diferentes da definida
+  "editor.detectIndentation": false,
+  "editor.codeActionsOnSave": {
+    // define que ao salvar, toda a configuração do lint seja aplicada ao código
+    "source.fixAll.eslint": true
+  }
+}
