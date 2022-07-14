@@ -1,0 +1,48 @@
+ORM - Object Relational Mapping // Mapeamento objeto relacional
+
+É um conceito que visa simplificar a comunicação entre aplicações desenvolvidas no paradigma de Orientação a Objetos 
+com bancos de dados relacionais. Contruímos aplicações em JS por exemplo e quando é necessário transacionar dados com
+um DB precisamos usar queries SQL. O que torna o desenvolvimento mais difícil e até menos produtivo
+Os frameworks ORM veem para solucionar isso estabelecendo uma comunicação com o DB com os recurso da linguagem usada
+no desenvolvimento da aplicação.
+
+Existem 2 principais padrões aplicados por frameworks ORM:
+
+Active Record -> a classe que representa a tabela sabe os recursos necessários necessaŕios para
+comunicar-se com o DB. Ou seja está acoplada a ele e realiza o CRUD
+
+DataMapper -> a classe não sabe sobre os recursos necessários para as transações de dados com o DB. há uma camada
+chamada de DataMapper que realizar essas transações. Ou seja a classe está desaclopada das transações com o DB.
+
+SEQUELIZE -> é o principal framework ORM usado no ecossistema do NodeJS para realizar a comunicação com o DB.
+Ele segue o padrão Active Record.
+
+npm i sequelize
+npm i sequelize-cli mysql2
+
+npx sequelize-cli init -> inicia projeto com sequelize. Cria 3 diretórios:
+
+config -> configurações para conexão do cli com o DB
+
+migrations -> arquivos para definir a estrutura do banco
+
+seeders -> arquivos para popular o banco
+
+models -> arquivos de models da aplicação
+
+npx sequelize db:create -> cria o db definido no config.json
+
+npx sequelize model:generate --name Nome --attributes atributo:tipoDeDado -> criar um model
+
+npx sequelize db:migrate -> cria a a tabela no banco de acordo com as configurações dos arquivos model e migration
+
+npx sequelize db:migrate:undo -> dropa a tabela criada com o comando anterior
+
+npx sequelize migration:generate --name add-column-nomeDaColuna-table-users -> adicionar coluna em uma tabela já existente,
+depois usar o método addColumn no arquivo da migration e rodar npx sequelize db:migrate
+
+
+
+
+
+
