@@ -1,0 +1,3 @@
+Mongoose é um ODM(Object Document Mapping/Mapeamento Objeto Documento), siginifica que ele é um framework que mapeia
+propriedades de uma classe para documentos em uma coleção do MongoDB.
+
