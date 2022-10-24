@@ -1,0 +1,338 @@
+[
+  {
+    "Title": "Super Mario 64 DS",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 85,
+      "Sales": 4.69,
+      "Used Price": 24.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 22.716666666666665,
+        "Leisure": 31.9,
+        "Median": 24.483333333333334,
+        "Polled": 57,
+        "Rushed": 14.3
+      },
+      "Completionists": {
+        "Average": 29.766666666666666,
+        "Leisure": 35.03333333333333,
+        "Median": 30.0,
+        "Polled": 20,
+        "Rushed": 22.016666666666666
+      },
+      "Main + Extras": {
+        "Average": 24.916666666666668,
+        "Leisure": 29.966666666666665,
+        "Median": 25.0,
+        "Polled": 16,
+        "Rushed": 18.333333333333332
+      },
+      "Main Story": {
+        "Average": 14.333333333333334,
+        "Leisure": 18.316666666666666,
+        "Median": 14.5,
+        "Polled": 21,
+        "Rushed": 9.7
+      }
+    }
+  },
+  {
+    "Title": "Lumines: Puzzle Fusion",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Strategy",
+      "Licensed?": true,
+      "Publishers": "Ubisoft",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 89,
+      "Sales": 0.56,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 10.1,
+        "Leisure": 11.016666666666667,
+        "Median": 10.0,
+        "Polled": 5,
+        "Rushed": 9.516666666666667
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 9.75,
+        "Leisure": 9.866666666666667,
+        "Median": 9.75,
+        "Polled": 2,
+        "Rushed": 9.616666666666667
+      },
+      "Main Story": {
+        "Average": 10.333333333333334,
+        "Leisure": 11.083333333333334,
+        "Median": 10.0,
+        "Polled": 3,
+        "Rushed": 9.583333333333334
+      }
+    }
+  },
+  {
+    "Title": "WarioWare Touched!",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 2,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action,Racing / Driving,Sports",
+      "Licensed?": true,
+      "Publishers": "Nintendo",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 81,
+      "Sales": 0.54,
+      "Used Price": 22.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 4.566666666666666,
+        "Leisure": 11.566666666666666,
+        "Median": 2.5,
+        "Polled": 57,
+        "Rushed": 2.2666666666666666
+      },
+      "Completionists": {
+        "Average": 10.0,
+        "Leisure": 14.1,
+        "Median": 7.25,
+        "Polled": 16,
+        "Rushed": 6.8
+      },
+      "Main + Extras": {
+        "Average": 3.85,
+        "Leisure": 5.666666666666667,
+        "Median": 3.3333333333333335,
+        "Polled": 11,
+        "Rushed": 2.783333333333333
+      },
+      "Main Story": {
+        "Average": 1.9166666666666665,
+        "Leisure": 2.9333333333333336,
+        "Median": 1.8333333333333335,
+        "Polled": 30,
+        "Rushed": 1.4333333333333333
+      }
+    }
+  },
+  {
+    "Title": "Hot Shots Golf: Open Tee",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Sports",
+      "Licensed?": true,
+      "Publishers": "Sony",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 81,
+      "Sales": 0.49,
+      "Used Price": 12.95
+    },
+    "Release": {
+      "Console": "Sony PSP",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Completionists": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main + Extras": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      },
+      "Main Story": {
+        "Average": 0.0,
+        "Leisure": 0.0,
+        "Median": 0.0,
+        "Polled": 0,
+        "Rushed": 0.0
+      }
+    }
+  },
+  {
+    "Title": "Spider-Man 2",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Action",
+      "Licensed?": true,
+      "Publishers": "Activision",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 61,
+      "Sales": 0.45,
+      "Used Price": 14.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "E",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 13.25,
+        "Leisure": 48.38333333333333,
+        "Median": 10.0,
+        "Polled": 37,
+        "Rushed": 7.066666666666666
+      },
+      "Completionists": {
+        "Average": 72.56666666666666,
+        "Leisure": 78.86666666666666,
+        "Median": 72.56666666666666,
+        "Polled": 2,
+        "Rushed": 66.28333333333333
+      },
+      "Main + Extras": {
+        "Average": 12.766666666666667,
+        "Leisure": 17.316666666666666,
+        "Median": 12.5,
+        "Polled": 12,
+        "Rushed": 10.483333333333333
+      },
+      "Main Story": {
+        "Average": 8.35,
+        "Leisure": 11.083333333333334,
+        "Median": 8.0,
+        "Polled": 23,
+        "Rushed": 5.333333333333333
+      }
+    }
+  },
+  {
+    "Title": "The Urbz: Sims in the City",
+    "Features": {
+      "Handheld?": true,
+      "Max Players": 1,
+      "Multiplatform?": true,
+      "Online?": true
+    },
+    "Metadata": {
+      "Genres": "Simulation",
+      "Licensed?": true,
+      "Publishers": "EA",
+      "Sequel?": true
+    },
+    "Metrics": {
+      "Review Score": 67,
+      "Sales": 0.41,
+      "Used Price": 12.95
+    },
+    "Release": {
+      "Console": "Nintendo DS",
+      "Rating": "M",
+      "Re-release?": true,
+      "Year": 2004
+    },
+    "Length": {
+      "All PlayStyles": {
+        "Average": 21.933333333333334,
+        "Leisure": 25.5,
+        "Median": 20.0,
+        "Polled": 7,
+        "Rushed": 16.733333333333334
+      },
+      "Completionists": {
+        "Average": 30.033333333333335,
+        "Leisure": 30.033333333333335,
+        "Median": 30.033333333333335,
+        "Polled": 2,
+        "Rushed": 30.033333333333335
+      },
+      "Main + Extras": {
+        "Average": 20.833333333333332,
+        "Leisure": 25.2,
+        "Median": 20.0,
+        "Polled": 3,
+        "Rushed": 16.45
+      },
+      "Main Story": {
+        "Average": 15.5,
+        "Leisure": 15.75,
+        "Median": 15.5,
+        "Polled": 2,
+        "Rushed": 15.25
+      }
+    }
+  }
+]
