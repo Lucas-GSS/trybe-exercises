@@ -1,0 +1,5 @@
+pytest tests/store/
+
+pytest tests/store/test_new_store.py
+
+pytest tests/store/test_new_store.py::test_metodo_de_teste
