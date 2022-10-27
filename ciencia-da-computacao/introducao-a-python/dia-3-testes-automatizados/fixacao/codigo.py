@@ -7,3 +7,7 @@ def is_odd(number):
 
 def sum(num1, num2):
         return num1 + num2
+
+
+def divide(num1, num2):
+    return num1 / num2
